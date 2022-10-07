@@ -32,6 +32,17 @@ describe("Calculator Minus", function () {
     const actual = await CalculatorContract.minus(a, b);
     expect(actual).to.equal(expected)
   })
+
+  it("should be able to calculate the difference between a positive and negative number", async function () {
+
+    const CalculatorFactory = await ethers.getContractFactory("Calculator");
+    const CalculatorContract = await CalculatorFactory.deploy();
+    const a = getRandomNumber();
+    const b = getRandomNegativeNumber();
+    const expected = a - b;
+    const actual = await CalculatorContract.minus(a, b);
+    expect(actual).to.equal(expected)
+  })
 })
 
 describe("Calculator Addition", function () {
