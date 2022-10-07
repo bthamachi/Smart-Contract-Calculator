@@ -3,6 +3,7 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import Web3Modal from "web3modal";
 import { providers } from "ethers";
 import { getGoerliSdk, GoerliSdk } from '../contractTypes';
+import React from 'react'
 
 
 type WalletContextType = {
